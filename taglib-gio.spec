@@ -1,7 +1,7 @@
 Summary: Audio meta-data library
 Name: taglib-gio
 Version: 0.2
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPLv2+
 Group: Sound
 Source0: http://redmine.youki.mp/attachments/download/31/%{name}-%{version}.tar.gz
