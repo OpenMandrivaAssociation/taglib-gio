@@ -1,0 +1,19 @@
+--- taglib-gio-0.2/taglib/Makefile.am.link	2010-01-31 10:56:58.000000000 +0100
++++ taglib-gio-0.2/taglib/Makefile.am	2010-01-31 10:57:19.000000000 +0100
+@@ -18,4 +18,4 @@
+ taglib_includedir = $(includedir)/taglib-gio
+ 
+ libtag_gio_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 5:0:4
+-libtag_gio_la_LIBADD = ./mpeg/libmpeg.la ./ogg/libogg.la ./flac/libflac.la ./mpc/libmpc.la ./ape/libape.la ./toolkit/libtoolkit.la
++libtag_gio_la_LIBADD = $(GIO_LIBS) ./mpeg/libmpeg.la ./ogg/libogg.la ./flac/libflac.la ./mpc/libmpc.la ./ape/libape.la ./toolkit/libtoolkit.la
+--- taglib-gio-0.2/taglib/Makefile.in.link	2010-01-31 10:57:27.000000000 +0100
++++ taglib-gio-0.2/taglib/Makefile.in	2010-01-31 10:57:42.000000000 +0100
+@@ -233,7 +233,7 @@
+ taglib_include_HEADERS = tag.h taglib_export.h fileref.h audioproperties.h
+ taglib_includedir = $(includedir)/taglib-gio
+ libtag_gio_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 5:0:4
+-libtag_gio_la_LIBADD = ./mpeg/libmpeg.la ./ogg/libogg.la ./flac/libflac.la ./mpc/libmpc.la ./ape/libape.la ./toolkit/libtoolkit.la
++libtag_gio_la_LIBADD = $(GIO_LIBS) ./mpeg/libmpeg.la ./ogg/libogg.la ./flac/libflac.la ./mpc/libmpc.la ./ape/libape.la ./toolkit/libtoolkit.la
+ all: all-recursive
+ 
+ .SUFFIXES:
