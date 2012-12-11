@@ -1,7 +1,7 @@
 Summary: Audio meta-data library
 Name: taglib-gio
 Version: 0.2
-Release: %mkrel 2
+Release: 3
 License: GPLv2+
 Group: Sound
 Source0: http://redmine.youki.mp/attachments/download/31/%{name}-%{version}.tar.gz
@@ -9,7 +9,6 @@ Patch0: taglib-gio-0.2-link.patch
 BuildRequires: glib2-devel
 BuildRequires: zlib-devel
 URL: http://youki.mp/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Audio meta-data library. Used by youki media player.
@@ -45,9 +44,8 @@ This package contains development files for taglib-gio.
 %files -n %develname
 %defattr(-, root, root)
 %{_bindir}/%name-config
-%multiarch %{multiarch_bindir}/%{name}-config
+%{multiarch_bindir}/%{name}-config
 %{_libdir}/*.so
-%{_libdir}/*.la
 %{_includedir}/%name
 %{_libdir}/pkgconfig/*.pc
 
@@ -65,7 +63,13 @@ rm -rf %buildroot
 
 %multiarch_binaries $RPM_BUILD_ROOT%{_bindir}/%name-config
 
-rm -f %buildroot%_libdir/*.a
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.2-2mdv2011.0
++ Revision: 615108
+- the mass rebuild of 2010.1 packages
 
-%clean
-rm -rf %buildroot
+* Sun Jan 31 2010 Funda Wang <fwang@mandriva.org> 0.2-1mdv2010.1
++ Revision: 498715
+- import taglib-gio
+
+
