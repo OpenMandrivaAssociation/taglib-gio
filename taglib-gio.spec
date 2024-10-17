@@ -8,7 +8,7 @@ Source0: http://redmine.youki.mp/attachments/download/31/%{name}-%{version}.tar.
 Patch0: taglib-gio-0.2-link.patch
 BuildRequires: glib2-devel
 BuildRequires: zlib-devel
-URL: http://youki.mp/
+URL: https://youki.mp/
 
 %description
 Audio meta-data library. Used by youki media player.
