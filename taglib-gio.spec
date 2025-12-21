@@ -6,6 +6,11 @@ License: GPLv2+
 Group: Sound
 Source0: http://redmine.youki.mp/attachments/download/31/%{name}-%{version}.tar.gz
 Patch0: taglib-gio-0.2-link.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: glib2-devel
 BuildRequires: zlib-devel
 URL: https://youki.mp/
